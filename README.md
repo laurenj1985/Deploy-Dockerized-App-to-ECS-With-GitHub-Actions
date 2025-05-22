@@ -9,7 +9,7 @@ I usec in this project:
 4. ECR (Elastic Container Registry)
 5. GitHub Actions (CI/CD)
 
-I built a web app, pushed the image to Amazon ECR, deployed it to AWS ECS (Fargate), and automated the whole workflow with GitHub Actions. Initially the app was accessible via ECS endpoint, but then I also attempted the application behind a load-balancer.
+I built a web app, pushed the image to Amazon ECR, deployed it to AWS ECS (Fargate), and automated the whole workflow with GitHub Actions. The app was accessible via ECS endpoint and behind a load-balancer.
 
 Although I did not use Terraform to build the application, I did build 90% of the infrastructure on the command line on a local Ubuntu server.
 
