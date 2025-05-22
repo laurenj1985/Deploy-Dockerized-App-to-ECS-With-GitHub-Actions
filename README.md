@@ -3,11 +3,11 @@
 The goal of this project was to get more familiar with and document the process of working with ECS and ECR. The application was a simple flask python app that opens to a page "Hello from ECS!". I decided to use Python instead of JavaScript just because I am more familiar with it.
 
 I usec in this project:
--Docker
--Python Flask
--AWS ECS with Fargate
--ECR (Elastic Container Registry)
--GitHub Actions (CI/CD)
+1. Docker
+2. Python Flask
+3. AWS ECS with Fargate
+4. ECR (Elastic Container Registry)
+5. GitHub Actions (CI/CD)
 
 I built a web app, pushed the image to Amazon ECR, deployed it to AWS ECS (Fargate), and automated the whole workflow with GitHub Actions. Initially the app was accessible via ECS endpoint, but then I also attempted the application behind a load-balancer.
 
