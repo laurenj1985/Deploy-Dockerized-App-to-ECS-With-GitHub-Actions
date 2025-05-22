@@ -26,12 +26,12 @@ jobs:
       run: |
         docker build -t ecs-docker-ci .
         docker tag ecs-docker-ci:latest 730335519137.dkr.ecr.us-east-1.amazonaws.com/ecs-docker-ci:latest
-        docker push <your-ecr-uri>:latest
+        docker push 730335519137.dkr.ecr.us-east-1.amazonaws.com/ecs-docker-ci:latest
 
     - name: Deploy to ECS
       run: |
         aws ecs update-service \
-          --cluster <your-cluster-name> \
-          --service <your-service-name> \
+          --cluster demo-cluster \
+          --service demo-service \
           --force-new-deployment
 
