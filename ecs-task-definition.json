@@ -1,0 +1,21 @@
+{
+  "family": "ecs-docker-ci-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::730335519137:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "ecs-docker-ci",
+      "image": "730335519137.dkr.ecr.us-east-1.amazonaws.com/ecs-docker-ci:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ]
+}
